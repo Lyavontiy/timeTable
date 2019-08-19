@@ -1,0 +1,314 @@
+:root{
+	--BGcolor: #97CA2D; /*Цвет фона шапки*/
+	--textColorStatic: #FCFFF6; /*Цвет текста*/
+	--hoverLink:#5B7876;/*Ховер ссылок*/
+	--BGSection:#EDF8F2;/*фон секции*/
+	--borderSection:#B5E656;/*граница блоков секции*/
+	--br: 10px; /*заркугление границ*/
+	--indent: 10px;/*отступы внутри блока*/
+	--br-title: #E9F9C9;/*граница хаголовков*/
+	--colorTextSection:#193340;/*цвет текста секции*/
+}
+
+body {
+	margin: 0;
+	padding: 0; 
+	font-family: Segoe UI;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*header*/
+
+#header {
+	width: 100%;
+	height: 60px;
+	background-color: var(--BGcolor);
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+
+#header .container{
+	max-width: 1280px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.title {
+	float: left;
+	font-size: 30px;
+	line-height: 60px;
+	margin-left: 30px;
+}
+
+.title a{
+	color: var(--textColorStatic);
+}
+
+.login {
+	float: right;
+}
+
+.login a{
+	color: var(--textColorStatic);
+	font-size: 20px;
+	line-height: 60px;
+	margin-right: 30px;
+}
+
+.login a:hover{
+	color: var(--hoverLink);
+}
+
+/*section*/
+#section {
+	width: 100%;
+	height: auto;
+}
+
+#section .container{
+	max-width: 1024px;
+	width: 100%;
+	background-color: var(--BGSection);;
+	margin: 20px auto;
+	border-radius: var(--br);
+	padding: var(--indent);
+	box-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+}
+
+.containerGridSection {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(228px,1fr));
+	grid-column-gap: 30px;
+}
+
+.styleH4Create {
+	font-size: 20px;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 10px;
+}
+
+.styleTitleBlock {
+	grid-column: 1/-1;
+	width: 100%;
+	height: 60px;
+	background-color: white;
+	border-radius: var(--br);
+	border: 1px solid var(--br-title);
+	overflow: hidden;
+}
+
+.styleTitleBlock h4{
+	text-align: center;
+	line-height: 60px;
+}
+
+.styleCreateBlock {
+	background-color: white;
+	border: 1px solid var(--borderSection);
+	margin: 10px 0px;
+	border-radius: var(--br);
+	padding: 5px;	
+}
+
+/*.styleCreateBlock:hover{
+	position: relative;
+	bottom: 2;
+	left: 0;
+	box-shadow: 0px 0px 2px rgba(0,0,0,0.5);
+}*/
+
+.createSubjectInGroup {
+  max-height: 262px;
+}
+
+.createSubjectInGroup p{
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+.createSubjectInGroup p span{
+	color: red;
+}
+
+.subjectlist {
+	width: 100%;
+	max-height: 180px;
+	overflow: auto;
+}
+
+
+.ulSubjects {
+	font-size: 12px;
+	list-style: none;
+}
+
+.ulSubjects li{
+	margin-top: 3px;
+}
+
+/*.ulSubjects li:hover{
+
+}*/
+
+.designForm input{
+	width: 218px;
+	border: 1px solid var(--borderSection);
+	border-radius: var(--br);
+	height: 30px;
+	margin-top: 10px;
+}
+
+.designForm input[type=text], input[type=password]{
+	text-align: center;
+}
+
+.designForm input[type=submit]{
+	margin-top: 20px;
+	font-size: 16px;
+	background-color: white;
+}
+
+.designForm input[type=submit]:hover{
+	position: relative;
+	bottom: 1;
+	left: 0;
+	cursor: pointer;
+	color: black;
+	background-color:#F6FFE0;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+
+/*section setting*/
+.workWithTable select{
+	width: 250px;
+	border: 1px solid var(--borderSection);
+	font-size: 16px;
+	border-radius: var(--br);
+	padding: 5px;
+	height: 30px;
+}
+
+.workWithTable select:hover{
+	cursor: pointer;
+}
+
+.workWithTable input{
+	width: 218px;
+	border: 1px solid var(--borderSection);
+	border-radius: var(--br);
+	height: 30px;
+	margin-top: 10px;
+}
+
+.workWithTable input[type=submit] {
+	margin-top: 20px;
+	font-size: 16px;
+	background-color: white;
+
+}
+
+.workWithTable input[type=submit]:hover { 
+	position: relative;
+	bottom: 0;
+	left: 2;
+	cursor: pointer;
+	color: black;
+	background-color:#F6FFE0;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+
+.containerGridXection .styleTableX{
+	border-radius: var(--br);
+	border-collapse: inherit;
+}
+
+.containerGridXection .styleTableXtr tr:hover{
+	background-color: #F0F3FF;
+	cursor: pointer;
+}
+
+.containerGridXection .styleTableX td{
+	border: 1px solid var(--borderSection);
+	padding: 5px;
+	margin: 0;
+}
+
+.styleLinkCreate {
+	padding: 0px 8px 6px 8px;
+	margin-left: 10px;
+	border: 1px solid var(--borderSection);
+	border-radius: var(--br);
+	font-size: 20px;
+}
+
+.styleLinkCreate:hover {
+	border-right: 2px solid var(--borderSection);
+	border-bottom: 2px solid var(--borderSection);
+}
+
+.titleRowTable,.contentRowTable input {
+	text-align: center;
+}
+
+.loginXX {
+	width: 220px;
+	margin: 20px auto; 
+	border: 1px solid var(--borderSection);
+	padding: 15px;
+	box-shadow: 0px 4px 5px rgba(0,0,0, 0.50);
+}
+
+.loginXX input{
+	width: 218px;
+	border: 1px solid var(--borderSection);
+	border-radius: var(--br);
+	height: 30px;
+	margin-top: 10px;
+}
+
+.loginXX input[type=submit] {
+	margin-top: 20px;
+	font-size: 16px;
+	background-color: white;
+
+}
+
+.loginXX input[type=submit]:hover { 
+	position: relative;
+	bottom: 0;
+	left: 0;
+	top: 2px;
+	cursor: pointer;
+	color: black;
+	background-color:#F6FFE0;
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.5);
+}
+
+.do_exitCSS {
+	margin-top: 20px;
+	border: 1px solid var(--borderSection);
+	color: #97CA2D;
+	padding: 5px 10px;
+	background-color: white;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.do_exitCSS:hover {
+	cursor: pointer;
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+	background-color: #97CA2D;
+	color: white;
+	transition: 0.5s;
+}
+/*head*/
+
+
+/*preolder*/
